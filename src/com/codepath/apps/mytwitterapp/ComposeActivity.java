@@ -13,12 +13,11 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 public class ComposeActivity extends Activity {
-  
+
   private static final int MAX_CHARS = 140;
   EditText etTweet;
   TextView tvCount;
@@ -28,6 +27,7 @@ public class ComposeActivity extends Activity {
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_compose);
+
     registerListeners();
   }
 
@@ -43,7 +43,8 @@ public class ComposeActivity extends Activity {
     tvCount.setText(String.valueOf(MAX_CHARS));
     etTweet = (EditText)findViewById(R.id.editText1);
     submitButton = (Button)findViewById(R.id.button1);
-    
+    etTweet = (EditText)findViewById(R.id.editText1);
+    Button submitButton = (Button)findViewById(R.id.button1);
     submitButton.setOnClickListener(new OnClickListener() {
       @Override
       public void onClick(View view) {
@@ -82,6 +83,7 @@ public class ComposeActivity extends Activity {
         
       }
     });
+
   }
 
 }

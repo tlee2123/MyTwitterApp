@@ -20,6 +20,7 @@ public class TweetsAdapter extends ArrayAdapter<Tweet> {
   private Long maxId = 0L;
   private Long sinceId = 0L;
 
+
   public TweetsAdapter(Context context, List<Tweet> tweets) {
     super(context, 0, tweets);
   }
@@ -31,7 +32,7 @@ public class TweetsAdapter extends ArrayAdapter<Tweet> {
   public Long getSinceId() {
     return this.sinceId;
   }
-  
+
   @Override
   public View getView(int position, View convertView, ViewGroup parent) {
     ViewHolder holder;
@@ -51,6 +52,7 @@ public class TweetsAdapter extends ArrayAdapter<Tweet> {
     }
     
     Tweet tweet = getItem(position);
+
     if (position == 0) {
       this.maxId = tweet.getId() - 1;
       this.sinceId = tweet.getId();
@@ -61,9 +63,6 @@ public class TweetsAdapter extends ArrayAdapter<Tweet> {
     }
     
     Log.i(String.valueOf(tweet.getId()), String.valueOf(position));
-    //Log.i("TWEET_ID", String.valueOf(tweet.getId()));
-    //Log.i("MAX_ID", String.valueOf(this.maxId));
-    //Log.i("SINCE_ID", String.valueOf(this.sinceId));
     
     ImageLoader.getInstance().displayImage(tweet.getUser().getProfileImageUrl(), holder.view);
     

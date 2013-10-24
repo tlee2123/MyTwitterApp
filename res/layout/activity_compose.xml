@@ -22,6 +22,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:maxLength="140"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:inputType="textMultiLine" />
 
@@ -33,7 +34,5 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="68dp"
         android:text="Submit" />
-
-
 
 </RelativeLayout>
